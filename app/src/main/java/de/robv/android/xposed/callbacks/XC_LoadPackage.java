@@ -23,7 +23,6 @@ public abstract class XC_LoadPackage extends XCallback implements IXposedHookLoa
 	 * Creates a new callback with a specific priority.
 	 *
 	 * @param priority See {@link XCallback#priority}.
-	 * @hide
 	 */
 	public XC_LoadPackage(int priority) {
 		super(priority);
@@ -33,7 +32,6 @@ public abstract class XC_LoadPackage extends XCallback implements IXposedHookLoa
 	 * Wraps information about the app being loaded.
 	 */
 	public static final class LoadPackageParam extends XCallback.Param {
-		/** @hide */
 		public LoadPackageParam(CopyOnWriteSortedSet<XC_LoadPackage> callbacks) {
 			super(callbacks);
 		}
@@ -54,7 +52,6 @@ public abstract class XC_LoadPackage extends XCallback implements IXposedHookLoa
 		public boolean isFirstApplication;
 	}
 
-	/** @hide */
 	@Override
 	protected void call(Param param) throws Throwable {
 		if (param instanceof LoadPackageParam)
