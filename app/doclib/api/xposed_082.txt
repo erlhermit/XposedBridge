@@ -79,6 +79,10 @@ package de.robv.android.xposed {
     method public abstract void handleLoadPackage(de.robv.android.xposed.callbacks.XC_LoadPackage.LoadPackageParam) throws java.lang.Throwable;
   }
 
+  public static final class IXposedHookLoadPackage.Wrapper extends de.robv.android.xposed.callbacks.XC_LoadPackage {
+    method public void handleLoadPackage(de.robv.android.xposed.callbacks.XC_LoadPackage.LoadPackageParam) throws java.lang.Throwable;
+  }
+
   public abstract interface IXposedHookZygoteInit {
     method public abstract void initZygote(de.robv.android.xposed.IXposedHookZygoteInit.StartupParam) throws java.lang.Throwable;
   }
@@ -159,6 +163,7 @@ package de.robv.android.xposed {
     method public static synchronized void log(java.lang.String);
     method public static synchronized void log(java.lang.Throwable);
     method public static deprecated void unhookMethod(java.lang.reflect.Member, de.robv.android.xposed.XC_MethodHook);
+    method public static void hookLoadPackage(de.robv.android.xposed.XC_LoadPackage);
     field public static final java.lang.ClassLoader BOOTCLASSLOADER;
     field public static deprecated int XPOSED_BRIDGE_VERSION;
   }
@@ -349,4 +354,3 @@ package de.robv.android.xposed.services {
   }
 
 }
-
