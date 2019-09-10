@@ -23,7 +23,6 @@ public interface IXposedHookLoadPackage extends IXposedMod {
 	 */
 	void handleLoadPackage(LoadPackageParam lpparam) throws Throwable;
 
-	/** @hide */
 	public final class Wrapper extends XC_LoadPackage {
 		private final IXposedHookLoadPackage instance;
 		public Wrapper(IXposedHookLoadPackage instance) {

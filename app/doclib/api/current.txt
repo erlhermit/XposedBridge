@@ -164,6 +164,7 @@ package de.robv.android.xposed {
     method public static synchronized void log(java.lang.Throwable);
     method public static deprecated void unhookMethod(java.lang.reflect.Member, de.robv.android.xposed.XC_MethodHook);
     method public static void hookLoadPackage(de.robv.android.xposed.XC_LoadPackage);
+    method public static void hookInitPackageResources(de.robv.android.xposed.callbacks.XC_InitPackageResources)
     field public static final java.lang.ClassLoader BOOTCLASSLOADER;
     field public static deprecated int XPOSED_BRIDGE_VERSION;
   }

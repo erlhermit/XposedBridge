@@ -397,7 +397,6 @@ public final class XposedBridge {
 	 * in your module class and Xposed will take care of registering it as a callback.
 	 *
 	 * @param callback The callback to be executed.
-	 * @hide
 	 */
 	public static void hookLoadPackage(XC_LoadPackage callback) {
 		synchronized (sLoadedPackageCallbacks) {
@@ -412,7 +411,6 @@ public final class XposedBridge {
 	 * in your module class and Xposed will take care of registering it as a callback.
 	 *
 	 * @param callback The callback to be executed.
-	 * @hide
 	 */
 	public static void hookInitPackageResources(XC_InitPackageResources callback) {
 		synchronized (sInitPackageResourcesCallbacks) {
